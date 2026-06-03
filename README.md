@@ -9,7 +9,7 @@ The Intelligent House Price Estimation System predicts the price of houses using
 ## Problem Statement:
 House prices vary depending on multiple factors, making accurate price estimation difficult. Manual estimation may lead to incorrect pricing and poor decision-making. This project aims to develop an intelligent system that predicts house prices using historical housing data and machine learning techniques, providing reliable and efficient price estimates.
 
-## Objectives:
+## Project Objectives:
 - Predict house prices accurately.
 - Analyze housing features and market trends.
 - Reduce manual effort in property valuation.

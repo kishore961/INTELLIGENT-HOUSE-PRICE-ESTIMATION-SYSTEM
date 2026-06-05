@@ -28,6 +28,7 @@ Manage user accounts,
 Manage property datasets,
 Monitor prediction results and
 Generate and view reports.
+
 User:
 Register and login,
 Enter house details,

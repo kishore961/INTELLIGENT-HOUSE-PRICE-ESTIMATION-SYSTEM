@@ -21,3 +21,56 @@ House prices vary depending on multiple factors, making accurate price estimatio
 *Backend:* Python, Flask
 
 *Database:* MySQL
+
+USER IDENTIFICATION
+1. Admin
+Manages users and property datasets
+Monitors system performance
+Views reports and prediction statistics
+2. User
+Registers and logs into the system
+Enters house/property details
+Obtains estimated house price
+Views prediction history
+MODULE IDENTIFICATION
+Module 1: User & Property Management
+
+Description: Handles user authentication and property information management.
+
+Functions:
+
+User Registration
+User Login
+Profile Management
+Add Property Details
+Update Property Details
+View Property Information
+Module 2: House Price Prediction
+
+Description: Processes property data and predicts house prices using machine learning.
+
+Functions:
+
+Input House Features
+Data Preprocessing
+Feature Selection
+House Price Estimation
+Display Prediction Results
+Module 3: Reports & Administration
+
+Description: Provides administrative controls and analytical reports.
+
+Functions:
+
+Manage Users
+Manage Property Dataset
+View Prediction History
+Generate Reports
+System Monitoring
+Total Users
+Admin
+User
+Total Modules
+User & Property Management
+House Price Prediction
+Reports & Administration

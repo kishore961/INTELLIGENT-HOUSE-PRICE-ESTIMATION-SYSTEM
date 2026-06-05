@@ -24,15 +24,15 @@ House prices vary depending on multiple factors, making accurate price estimatio
 
 ## User identification:
 Admin:
--Manage user accounts
--Manage property datasets
--Monitor prediction results
--Generate and view reports
+-Manage user accounts.
+-Manage property datasets.
+-Monitor prediction results.
+-Generate and view reports.
 User:
--Register and login
--Enter house details
--Predict house prices
--View prediction history
+-Register and login.
+-Enter house details.
+-Predict house prices.
+-View prediction history.
 
 ## Module idetification:
 
@@ -41,38 +41,38 @@ Module 1: User Management
 Purpose: Manages user registration, login, and profile details.
 
 Functions:
--User Registration
--User Login
--Profile Management
--Authentication
+-User Registration.
+-User Login.
+-Profile Management.
+-Authentication.
 
 Module 2: House Data Management
 
 Purpose: Collects and manages property information for prediction.
 
 Functions:
--Enter Property Details
--Update Property Information
--View Property Records
--Manage House Features
+-Enter Property Details.
+-Update Property Information.
+-View Property Records.
+-Manage House Features.
 
 Module 3: House Price Estimation
 
 Purpose: Predicts house prices using machine learning algorithms.
 
 Functions:
--Data Preprocessing
--Feature Selection
--Price Prediction
--Display Estimated Price
+-Data Preprocessing.
+-Feature Selection.
+-Price Prediction.
+-Display Estimated Price.
 
 Module 4: Reports & Administration
 
 Purpose: Provides reports and administrative controls.
 
 Functions:
--View Prediction History
--Generate Reports
--Manage Users
--Manage Datasets
--System Monitoring
+-View Prediction History.
+-Generate Reports.
+-Manage Users.
+-Manage Datasets.
+-System Monitoring.

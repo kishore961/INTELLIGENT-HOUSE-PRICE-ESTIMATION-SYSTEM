@@ -23,12 +23,12 @@ House prices vary depending on multiple factors, making accurate price estimatio
 *Database:* MySQL
 
 ## User identification:
-Admin:
+#Admin:
 -Manage user accounts.
 -Manage property datasets.
 -Monitor prediction results.
 -Generate and view reports.
-User:
+#User:
 -Register and login.
 -Enter house details.
 -Predict house prices.

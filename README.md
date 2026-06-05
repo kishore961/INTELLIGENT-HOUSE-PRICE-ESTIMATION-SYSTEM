@@ -26,9 +26,9 @@ House prices vary depending on multiple factors, making accurate price estimatio
 Admin:
 Manage user accounts,
 Manage property datasets,
-Monitor prediction results,
+Monitor prediction results and
 Generate and view reports.
-## User:
+User:
 Register and login,
 Enter house details,
 Predict house prices and

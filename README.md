@@ -37,7 +37,7 @@ View prediction history.
 
 ## Module idetification:
 
-Module 1: User Management
+## Module 1: User Management
 
 Purpose: Manages user registration, login, and profile details.
 
@@ -47,7 +47,7 @@ User Login,
 Profile Management and
 Authentication.
 
-Module 2: House Data Management
+## Module 2: House Data Management
 
 Purpose: Collects and manages property information for prediction.
 
@@ -57,7 +57,7 @@ Update Property Information,
 View Property Records and
 Manage House Features.
 
-Module 3: House Price Estimation
+## Module 3: House Price Estimation
 
 Purpose: Predicts house prices using machine learning algorithms.
 
@@ -67,7 +67,7 @@ Feature Selection,
 Price Prediction and
 Display Estimated Price.
 
-Module 4: Reports & Administration
+## Module 4: Reports & Administration
 
 Purpose: Provides reports and administrative controls.
 

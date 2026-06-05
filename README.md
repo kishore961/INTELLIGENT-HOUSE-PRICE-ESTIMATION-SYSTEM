@@ -23,16 +23,16 @@ House prices vary depending on multiple factors, making accurate price estimatio
 *Database:* MySQL
 
 ## User identification:
-##Admin:
--Manage user accounts.
--Manage property datasets.
--Monitor prediction results.
--Generate and view reports.
-##User:
--Register and login.
--Enter house details.
--Predict house prices.
--View prediction history.
+Admin:
+Manage user accounts,
+Manage property datasets,
+Monitor prediction results,
+Generate and view reports.
+## User:
+Register and login,
+Enter house details,
+Predict house prices and
+View prediction history.
 
 ## Module idetification:
 
@@ -40,39 +40,39 @@ Module 1: User Management
 
 Purpose: Manages user registration, login, and profile details.
 
-##Functions:
--User Registration.
--User Login.
--Profile Management.
--Authentication.
+Functions:
+User Registration,
+User Login,
+Profile Management and
+Authentication.
 
 Module 2: House Data Management
 
 Purpose: Collects and manages property information for prediction.
 
-##Functions:
--Enter Property Details.
--Update Property Information.
--View Property Records.
--Manage House Features.
+Functions:
+Enter Property Details,
+Update Property Information,
+View Property Records and
+Manage House Features.
 
 Module 3: House Price Estimation
 
 Purpose: Predicts house prices using machine learning algorithms.
 
-##Functions:
--Data Preprocessing.
--Feature Selection.
--Price Prediction.
--Display Estimated Price.
+Functions:
+Data Preprocessing,
+Feature Selection,
+Price Prediction and
+Display Estimated Price.
 
 Module 4: Reports & Administration
 
 Purpose: Provides reports and administrative controls.
 
-##Functions:
--View Prediction History.
--Generate Reports.
--Manage Users.
--Manage Datasets.
--System Monitoring.
+Functions:
+View Prediction History,
+Generate Reports,
+Manage Users,
+Manage Datasets and
+System Monitoring.

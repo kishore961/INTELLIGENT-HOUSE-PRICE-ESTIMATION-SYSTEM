@@ -1,0 +1,106 @@
+CREATE DATABASE house_price_estimation;
+USE house_price_estimation;
+
+CREATE TABLE locations (
+    location_id INT AUTO_INCREMENT PRIMARY KEY,
+    city VARCHAR(100),
+    locality VARCHAR(100),
+    state VARCHAR(100),
+    pincode VARCHAR(10),
+    latitude DECIMAL(10,6),
+    longitude DECIMAL(10,6)
+);
+
+CREATE TABLE properties (
+    property_id INT AUTO_INCREMENT PRIMARY KEY,
+    location_id INT,
+    property_type ENUM('Apartment','Independent House','Villa','Plot') NOT NULL,
+    area_sqft DECIMAL(10,2) NOT NULL,
+    bedrooms INT,
+    bathrooms INT,
+    balconies INT,
+    floor_no INT,
+    total_floors INT,
+    age_of_property INT, -- in years
+    furnishing_status ENUM('Unfurnished','Semi-Furnished','Furnished'),
+    facing ENUM('North','South','East','West','North-East','North-West','South-East','South-West'),
+    parking_spaces INT,
+    has_lift BOOLEAN DEFAULT FALSE,
+    has_security BOOLEAN DEFAULT FALSE,
+    has_gym BOOLEAN DEFAULT FALSE,
+    has_pool BOOLEAN DEFAULT FALSE,
+    has_garden BOOLEAN DEFAULT FALSE,
+    nearby_schools INT DEFAULT 0,
+    nearby_hospitals INT DEFAULT 0,
+    distance_to_city_center DECIMAL(6,2), -- in km
+    FOREIGN KEY (location_id) REFERENCES locations(location_id)
+);
+
+CREATE TABLE price_history (
+    price_id INT AUTO_INCREMENT PRIMARY KEY,
+    property_id INT,
+    price DECIMAL(15,2) NOT NULL,
+    price_per_sqft DECIMAL(10,2),
+    listing_date DATE,
+    sold_date DATE,
+    status ENUM('Listed','Sold','Withdrawn') DEFAULT 'Listed',
+    FOREIGN KEY (property_id) REFERENCES properties(property_id)
+);
+
+CREATE TABLE market_trends (
+    trend_id INT AUTO_INCREMENT PRIMARY KEY,
+    location_id INT,
+    year INT,
+    quarter INT,
+    avg_price_per_sqft DECIMAL(10,2),
+    price_growth_percent DECIMAL(5,2),
+    demand_index DECIMAL(5,2),
+    FOREIGN KEY (location_id) REFERENCES locations(location_id)
+);
+
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(150) UNIQUE,
+    phone VARCHAR(15),
+    password_hash VARCHAR(255),
+    role ENUM('Buyer','Seller','Agent','Admin') DEFAULT 'Buyer',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE predictions (
+    prediction_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    property_id INT,
+    predicted_price DECIMAL(15,2),
+    model_version VARCHAR(50),
+    confidence_score DECIMAL(5,2),
+    predicted_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (property_id) REFERENCES properties(property_id)
+);
+
+CREATE TABLE amenities (
+    amenity_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) UNIQUE
+);
+
+CREATE TABLE property_amenities (
+    property_id INT,
+    amenity_id INT,
+    PRIMARY KEY (property_id, amenity_id),
+    FOREIGN KEY (property_id) REFERENCES properties(property_id),
+    FOREIGN KEY (amenity_id) REFERENCES amenities(amenity_id)
+);
+
+CREATE TABLE feedback (
+    feedback_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    property_id INT,
+    actual_price DECIMAL(15,2),
+    predicted_price DECIMAL(15,2),
+    comments TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (property_id) REFERENCES properties(property_id)
+);
